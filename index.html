@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Interactive Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img src="https://alaqsa.edu.ps/site/MainPage/Resources/img/logo.png" alt="Al-Aqsa University" onerror="this.style.display='none'">
+        <div class="title-area">
+            <h1>Interactive Calculator</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div>
+            <!-- Calculator -->
+            <div class="calculator" role="application" aria-label="Calculator">
+                <div class="calc-title">JavaScript Calculator</div>
+
+                <!-- Display -->
+                <div class="display" id="display" aria-live="polite" aria-atomic="true">
+                    <div class="previous" id="previousDisplay"></div>
+                    <div class="current" id="currentDisplay">0</div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="buttons" role="group" aria-label="Calculator buttons">
+                    <!-- Row 1: Clear, Backspace, %, / -->
+                    <button class="btn btn-clear" id="clearBtn" aria-label="Clear all">C</button>
+                    <button class="btn btn-clear" id="backspaceBtn" aria-label="Backspace">&#9003;</button>
+                    <button class="btn btn-operator" data-operator="%" aria-label="Percent">%</button>
+                    <button class="btn btn-operator" data-operator="/" aria-label="Divide">&#247;</button>
+
+                    <!-- Row 2: 7, 8, 9, * -->
+                    <button class="btn btn-number" data-number="7" aria-label="7">7</button>
+                    <button class="btn btn-number" data-number="8" aria-label="8">8</button>
+                    <button class="btn btn-number" data-number="9" aria-label="9">9</button>
+                    <button class="btn btn-operator" data-operator="*" aria-label="Multiply">&#215;</button>
+
+                    <!-- Row 3: 4, 5, 6, - -->
+                    <button class="btn btn-number" data-number="4" aria-label="4">4</button>
+                    <button class="btn btn-number" data-number="5" aria-label="5">5</button>
+                    <button class="btn btn-number" data-number="6" aria-label="6">6</button>
+                    <button class="btn btn-operator" data-operator="-" aria-label="Subtract">&#8722;</button>
+
+                    <!-- Row 4: 1, 2, 3, + -->
+                    <button class="btn btn-number" data-number="1" aria-label="1">1</button>
+                    <button class="btn btn-number" data-number="2" aria-label="2">2</button>
+                    <button class="btn btn-number" data-number="3" aria-label="3">3</button>
+                    <button class="btn btn-operator" data-operator="+" aria-label="Add">+</button>
+
+                    <!-- Row 5: 0 (span 2), ., = (span 2) -->
+                    <button class="btn btn-number btn-zero" data-number="0" aria-label="0">0</button>
+                    <button class="btn btn-number" data-number="." aria-label="Decimal point">.</button>
+                    <button class="btn btn-equals" id="equalsBtn" aria-label="Calculate result">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        Al-Aqsa University &mdash; Web Development 1
+    </footer>
+
+
+    <script src="calculator.js"></script>
+
+</body>
+</html>
